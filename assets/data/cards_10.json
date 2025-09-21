@@ -1,0 +1,22 @@
+[
+    {
+        "front": "Can you think of a problem that has strong or exponential scaling?",
+        "back": "Discuss: problems where cost of compute, or memory scales up very quickly."
+    },
+    {
+        "front": "Given current trends in quantum hardware improvements, when could we expect to be able to use Shor's algorithm in a practical manner?",
+        "back": "It's generally considered that 100 logical qubits are required for Shor's algorithm. Current trends suggest reaching this scale in the middle of next decade (2030s)?"
+    },
+    {
+        "front": "How would the Grover's algorithm change if there were multiple solutions which are marked",
+        "back": "Open discussion."        
+    },
+    {
+        "front": "Are there any specific early quantum algorithms that you'll be interested in exploring further or finding their applications in more details?",
+        "back": "Open discussion."
+    },
+    {
+        "front": "Why are we not using the early quantum algorithms in production today?",
+        "back": "Open discussion."
+    }
+]

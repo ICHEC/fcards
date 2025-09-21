@@ -1,0 +1,26 @@
+[
+    {
+        "front": "What does Linear dependence and Independence of vectors imply? ",
+        "back": "**Discuss**"
+    },
+    {
+        "front": "How is the Computational complexity of Quantum system's simulation on a classical system connected to the size of the quantum system.",
+        "back": "The growing size of the Hilbert space prohibits computation."  
+    },
+    {
+        "front": "Is the connection between states represented as vectors and operators represented as matrices clear?",
+        "back": "Discuss"
+    },
+    {
+        "front": "What is the mathematical implication of the measurement of the quantum state, what happens to the vector when measured in a basis?",
+        "back": "Discuss"
+    },
+    {
+        "front": "How do you combine the hilbert space created by multople qubits, how do the vectors change and how do the operators change?",
+        "back": "How does the bigger system looks like, and how it changes the scale of the problem."
+    },
+    {
+        "front": "Mathematical connection to derive no-cloning theorem",
+        "back": "Discuss"
+    }
+]

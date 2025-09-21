@@ -1,0 +1,52 @@
+# Configurations
+title:            QPCC Flashcards
+longtitle:        ICHEC Web Quiz setup
+author:           ICHEC Quantum Team
+email:            qpcc@ichec.ie
+description: Flashcards for lecture notes, quizes
+
+url:              'https://ichec.github.io'
+baseurl:          '/fcards'
+theme: minima
+
+# bootstrap: use the remote theme for the site itself
+#remote_theme: sighingnow/jekyll-gitbook
+
+markdown_ext: md
+#, markdown,mkdown,mkdn,mkd,
+
+#toc:
+#  enabled: true
+#  h_min: 1
+#  h_max: 4
+
+# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
+# favicon_path:     /assets/gitbook/images/favicon.ico
+
+# markdown render engine.
+markdown:         kramdown
+
+exclude:
+  - _drafts
+  - scratch
+  - README.md
+
+include:
+  - assets/quizzes
+
+collections:
+  lectures:
+    output: true
+    permalink: /lectures/:name
+
+destination:      ./_site
+regenerate:       true
+
+plugins:
+  - jekyll-feed
+  - jekyll-relative-links
+  - jemoji
+  - jekyll-youtube
+
+titles_from_headings:
+  enabled: false

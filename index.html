@@ -1,0 +1,45 @@
+---
+layout: default
+title: Flashcard Lectures
+---
+
+<style>
+  .lecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .lecture-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .lecture-card:hover {
+    border-color: #0b74ff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+  }
+  .lecture-card a {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #0b74ff;
+    text-decoration: none;
+  }
+</style>
+
+<h1>📘 Flashcard Lectures</h1>
+<p>Pick a lecture to study:</p>
+
+<div class="lecture-grid">
+  {% for lec in site.lectures %}
+    <div class="lecture-card">
+      <a href="{{ lec.url | relative_url }}">{{ lec.title }}</a>
+    </div>
+  {% endfor %}
+</div>

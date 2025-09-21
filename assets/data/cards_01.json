@@ -1,0 +1,110 @@
+[
+    {
+        "front": "How does quantum computing (QC) fit alongside classical high-performance computing (HPC) systems & applications?",
+        "back": "QC will serve as an accelerator in HPC for specific parts of an application, leading to hybrid HPC-QC systems & applications."
+    },
+    {
+        "front": "What type of sectors and computational problems does classical high-performance computing (HPC) enable?",
+        "back": "Discuss across material science, engineering and manufacturing, molecular modelling, life science, fin tech, data analytics, machine learning, optimisation, logistics, modelling and simulation in fundamental sciences."
+    },
+    {
+        "front": "If you were/need to gain access to quantum computers, then would you want on-premise or remote cloud access? Why?",
+        "back": "Review your value proposition in quantum computing to identify your role (technology co-developer, service provider, user), security/strategy requirements, etc.. Also, consider your  software stack for your access mechanism."
+    },
+    {
+        "front": "What is the nature and what are some examples of BQP class problems?",
+        "back": "A bounded-error quantum polynomial time problem denotes one that is solvable by a quantum computer in polynomial time, with an error probability of at most 1/4 for all instances. Refer and discuss further details https://www.quantiki.org/wiki/bqp."
+    },
+    {
+        "front": "What types of problems can quantum computing (QC) solve better than classical high-performance computing (HPC)?",
+        "back": "Problems with approximations to address intractability, reducing precision when scaling complexity, simulate models which are related to quantum mechanics, etc.."
+    },
+    {
+        "front": "How would you define your role & value in quantum computing (QC)?",
+        "back": "This is best defined in discussion with experts in quantum computing systems & applications. Opportunities lie in end-user applications, co-development of technologies, ecosystem leadership, skills & training, etc.."
+    },
+    {
+        "front": "What are key tipping points or milestones for quantum computing (QC) to become more reliable & scalable?",
+        "back": "Improved noise & reliability in qubits & quantum gates, precision in control & engineering of quantum systems, integration of classical HPC & QC systems, higher-level software tools integrated with classical software tools."
+    },
+    {
+        "front": "Do quantum computers always need to be refridgerated and operated at extremely low temperatures?",
+        "back": "Not all quantum computer realisation methods require refridgeration and operation at extremely low temperatures. For instance, the superconducting approach requires refridgeration, while photonics or diamond-based approaches may be operated at room temperature."
+    },
+    {
+        "front": "If real NISQ devices are already available for free access, then do we need software-based simulators of quantum computers?",
+        "back": "Given the limitations of small and error-prone NISQ devices, software-based quantum simulators offer a valuable alternative for easier experimentation and skills development before transitioning to real hardware. Starting with simulators facilitates learning and development, providing a more accessible entry point compared to directly working with NISQ hardware."
+    },
+    {
+        "front": "How or where can you start your engagement with quantum computing?",
+        "back": "Investigate potential use-cases of interest, mechanisms for skills development, partners for collaborations & discussion, national & international programmes in which to participate, etc.."
+    },
+    {
+        "front": "What are some mechanisms through which I can get access to quantum computing environments now?",
+        "back": "There are a variety of free, open as well as paid, closed resources and support available. These are at national, European and global levels. Discuss with the ICHEC tutors to identify what suits your requirements."
+    },
+    {
+        "front": "If QPU as an accelerator is similar to GPU/FPGA as an accelerator, then what are the key differences?",
+        "back": "Consider the distinct steps required and their purpose in quantum computing related to quantum encoding, measurements and post-processing as outlined in the quantum computation workflow."
+    },
+    {
+        "front": "Which mode of operating a quantum computing system allows for turning off noise/errors? Why is this possible?",
+        "back": "Software-based simulation. This is because computational models of noise are included as optional features in the simulators."
+    },
+    {
+        "front": "When modelling and simulating systems (e.g. molecular, materials, etc.) what kind of compromises that are done in classical HPC could quantum computing reduce?",
+        "back": "Review and discuss w.r.t. use of approximation methods when calculating energies of electronic structures, limiting the number of iterations or precision or accuracy when simulating the time evolution of systems, etc."
+    },
+    {
+        "front": "What do you consider as a good pathway to start learning quantum programming on a quantum computing system?",
+        "back": "Explore application characteristics that could be suitable for quantum computing, identify candidate programming tools and algorithmic methods, gain access to a software simulator (recommended programming on a quantum computing hardware)."
+    },
+    {
+        "front": "Do you see benefits in using quantum computing as a part of a hybrid HPC-QC framework?",
+        "back": "Consider and discuss this from the views of computing technologies (e.g. CPUs, accelerators), programming tools (e.g. avoiding separate disconnected set of tools), applications (e.g. how GPUs have become general purpose for simulation/AI methods)."
+    },
+    {
+        "front": "Can quantum-enhanced machine learning replace classical machine learning?",
+        "back": "Not according to our current understanding. Large datasets could not be encoded due to expensive state preparation. So, quantum-enabled machine learning could accelerate certain computational steps within machine learning."
+    },
+    {
+        "front": "How could AI and QC enable each other?",
+        "back": "Review and discuss along the lines of QC addressing search and optimisation steps in machine learning, and AI/machine learning for design, simulation and control of QC systems."
+    },
+    {
+        "front": "What are some national mechanisms available for Irish organisations to access QC or hybrid HPC-QC resources?",
+        "back": "EuroHPC activities such as HPCQS and EuroQCS is currently developing resources for QC and hybrid HPC-QC platforms, tools, use-cases and training material. ICHEC is a partner in many of these activities. Through the National Service and EuroCC activities, ICHEC can support you to gain acccess to these resources and communities."
+    },
+    {
+        "front": "What are some of the hybrid HPC-QC platforms and software tools being developed?",
+        "back": "Explore the references provided in this notebook, discuss among the cohort and with ICHEC staff, or search online about EuroHPC, HPCQS, EuroQCS, XACC, AWS Braket, Nvidia QODA/cuQuantum, IBM Quantum Runtime/Serverless, etc."
+    },
+    {
+        "front": "What European activities are advancing the development of quantum computing system software?",
+        "back": "The main ones are under the EuroHPC HPC-QCS projects (HPCQS, EuroQCS) along with national initiatives (Munich Quantum Software Stack, CEA in France, etc.). ICHEC and Ireland is also involved in co-developing these."
+    },
+    {
+        "front": "Which one is the best quantum computing software framework to use?",
+        "back": "The jury is out on this. They are all under development - some cater to specific disciplines, some have better interoperability, some have a wider range of programming language options, etc.. Review and select based on your learning objective."
+    },
+    {
+        "front": "What interdisciplinary skills and resources would you or your organisation need for learning more about hybrid HPC-QC?",
+        "back": "Consider and/or discuss with the cohort and ICHEC staff about one or more of the following: potential partners, candidate use-case(s), high-level application workflow, software tools, access to platforms, and any reference material (scientific articles, white papers, publicly-available demonstrators, etc.)."
+    },
+    {
+        "front": "Discuss the idea of reversibility in classical and quantum gates",
+        "back": "Classical gates can in general be irreversible whereas quantum gates are always reversible."
+    },
+    {
+        "front": "Discuss the differences in the features of classical and quantum computing",
+        "back": "Differences : No irreversible gates in quantum computing while classical gates can be reversible, copying of states is not possible with qubits but it's possible to copy bits in classical computing, quantum bits exhibit superposition/entanglement which are not exhibited by classical bits, quantum measurements are probabilstic whereas classical results are deterministic."
+    },
+    {
+        "front": "Discuss the similarities in the features of classical and quantum computing",
+        "back": " Similarities : Both have universal gatesets, and require the existence of independent states like the 0 and 1 state. Gates are used to manipulate the information in both cases."
+    },
+    {
+        "front": "What are the implications of no-cloning theorem on practical quantum computing",
+        "back": "Unlike classical bits, one can not copy qubits. This makes the tackling of errors and noise even more challenging."
+    }
+]

@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/assets/css/flashcards.css' | relative_url }}">
+
+<a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+<h1>{{ page.title }}</h1>
+
+
+
+<div class="flashcard-container">
+  <div class="flashcard-wrapper">         <!-- <-- NEW wrapper -->
+    <div class="flashcard" id="flashcard">
+      <div class="flashcard-inner">
+        <div class="flashcard-front"></div>
+        <div class="flashcard-back"></div>
+      </div>
+    </div>
+
+    <div class="flashcard-nav">
+      <button id="prevBtn">← Prev</button>
+      <button id="nextBtn">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+async function loadCards() {
+  const res = await fetch("{{ page.jsonfile | relative_url }}");
+  const cards = await res.json();
+
+  let current = 0;
+  const flashcard = document.getElementById("flashcard");
+  const front = flashcard.querySelector(".flashcard-front");
+  const back = flashcard.querySelector(".flashcard-back");
+
+  function renderCard() {
+    front.innerHTML = marked.parse(cards[current].front); // markdown support
+    back.innerHTML = marked.parse(cards[current].back);
+    flashcard.classList.remove("is-flipped");
+  }
+
+  renderCard();
+
+  // flip on click
+  flashcard.addEventListener("click", () => {
+    flashcard.classList.toggle("is-flipped");
+  });
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    if (current > 0) {
+      current--;
+      renderCard();
+    }
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    if (current < cards.length - 1) {
+      current++;
+      renderCard();
+    }
+  });
+}
+
+loadCards();
+</script>
+
+<!-- Add Markdown renderer (same one you used before) -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+

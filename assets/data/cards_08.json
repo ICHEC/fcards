@@ -1,0 +1,34 @@
+[
+    {
+        "front": "Discuss why should we use quantum computing software simulators when quantum hardware is available.",
+        "back": "Accessibility, noiseless simulations, testing environment, learning and education, relatively low cost."
+    },
+    {
+        "front": "Discuss the differrences between tightly-integrated quantum systems and heterogenous quantum systems. Why might you prefer the use of one over the other?",
+        "back": "Contrast and compare quantum stack component choices."
+    },
+    {
+        "front": "Discuss if you would choose a quantum computing stack based on your companies current connections with existing providers, or based on technical merits?",
+        "back": "Open discussion."
+    },
+    {
+        "front": "Discuss and consider potential advantages and disadvantages in developing partnerships with publicly-funded institutions that provide quantum system access and expertise in quantum computing.",
+        "back": "Example advantages: Low cost, access to academic research, and hardware resources. Example disadvantages: Public release of results."
+    },
+    {
+        "front": "Compare high-level and low level quantum programming software - what are the uses cases for both?",
+        "back": "High-level quantum programming software is used to interface with classical software components and to encode the quantum algorithms at a higher level. Low level quantum programming software is used as intermediate represention of the required quantum computations and facilitates targeting different quantum execution platforms."
+    },
+    {
+        "front": "If you have to choose between IBM Qiskit and Amazon Braket which one would you choose. Why might you prefer the use of one over the other?",
+        "back": "Contrast and compare options in quantum software and hardware component available."
+    },
+    {
+        "front": "Do you have a use case in mind for which you might need to build a custom quantum software stack?",
+        "back": "Dicsuss chalenges in integrating different quantum and classical components."
+    },
+    {
+        "front": "Describe your experince in preparing quantum circuits in IBM Composer and coding them in IBM Qiskit.",
+        "back": "Open discussion."
+    }
+]

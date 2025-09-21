@@ -1,0 +1,26 @@
+[
+    {
+        "front": "Contrast and compare early vs NISQ era quantum algorithms.",
+        "back": "Early quantum algorithms have mathematically proven advantages over the best known classical algorithms, but require fault-tolerant quantum hardware. On the other NISQ era quantum algorithms were developped to take advantage of the currenly available quantum hardware, but don't come with advantage guarantees and are limited in scale."
+    },
+    {
+        "front": "Did you identify any categories of NISQ era quantum algorithms - simulation, optimisation, machine learning - that could be applied to use cases in your industry?",
+        "back": "For example: Optimization in traffic, Machine learning in Finance and Automotive, Simulation in Physics and Chemistry."
+    },
+    {
+        "front": "Are there any specific quantum algorithms that you'll be interested in exploring further or finding their applications in more details?",
+        "back": "Open discussion."
+    },
+    {
+	"front":"What is your impression of QUBO, versus optimization of function of real variables?",
+	"back": "Discuss the difficulty, and limitations"
+    },
+    {
+        "front":"In the Set partitioning problem, what do you think is the limitation of heuristic algorithm?",
+        "back": "Discuss the limitation, scalability."
+    },
+    {
+        "front": "Are there other problems of your field that you can map to QUBO?",
+        "back": "Open discussion."
+    }
+]

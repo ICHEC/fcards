@@ -1,0 +1,42 @@
+[
+    {
+        "front": "How can the limitations of current QKD systems, such as distance constraints and the need for trusted nodes, be overcome to create a truly global quantum communication network?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Given the threat of quantum computers breaking classical encryption, should industries focus more on migrating to PQC solutions, or invest in QKD technologies?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Can QRNG offer advantages in fields beyond cryptography, such as scientific modelling, artificial intelligence, or even complex simulations?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Are there more advanced quantum communication protocols beyond BB84 and E91 that offer enhanced security and efficiency for quantum networks?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Could Grover’s algorithm or similar quantum algorithms disrupt industries reliant on large-scale data search and optimization? How can businesses prepare for such quantum disruptions?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Beyond secure communications, are there other telecom domains where quantum technology can be applied?",
+        "back": "Discuss"
+    },
+    {
+        "front": "What is the quantum internet, how does it incorporate QKD systems, and what benefits would it provide?",
+        "back": "Discuss"
+    },
+    {
+        "front": "What are the major challenges to widespread adoption of quantum technologies like QKD in industries?",
+        "back": "Discuss"
+    },
+    {
+        "front": "What measures can organizations take today to start preparing for quantum-safe cryptography?",
+        "back": "Discuss"
+    },
+    {
+        "front": "Are there ethical concerns or challenges that come with the development of QKD systems?",
+        "back": "Discuss"
+    }
+]
