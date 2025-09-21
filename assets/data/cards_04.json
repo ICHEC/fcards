@@ -1,7 +1,7 @@
 [
     {
         "front": "What does Linear dependence and Independence of vectors imply? ",
-        "back": "**Discuss**"
+        "back": "**Discuss** ${\\bf v} = \\sum_i a_i {\\bf v}_i$"
     },
     {
         "front": "How is the Computational complexity of Quantum system's simulation on a classical system connected to the size of the quantum system.",

@@ -6,10 +6,8 @@ layout: default
 <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
 <h1>{{ page.title }}</h1>
 
-
-
 <div class="flashcard-container">
-  <div class="flashcard-wrapper">         <!-- <-- NEW wrapper -->
+  <div class="flashcard-wrapper">
     <div class="flashcard" id="flashcard">
       <div class="flashcard-inner">
         <div class="flashcard-front"></div>
@@ -24,6 +22,20 @@ layout: default
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- MathJax config -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],   // allow $...$ and \(...\)
+    displayMath: [['$$', '$$'], ['\\[', '\\]']] // allow $$...$$ and \[...\]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
 <script>
 async function loadCards() {
   const res = await fetch("{{ page.jsonfile | relative_url }}");
@@ -35,9 +47,14 @@ async function loadCards() {
   const back = flashcard.querySelector(".flashcard-back");
 
   function renderCard() {
-    front.innerHTML = marked.parse(cards[current].front); // markdown support
+    front.innerHTML = marked.parse(cards[current].front);
     back.innerHTML = marked.parse(cards[current].back);
     flashcard.classList.remove("is-flipped");
+
+    if (window.MathJax) {
+      MathJax.typesetClear();
+      MathJax.typesetPromise([flashcard]);
+    }
   }
 
   renderCard();
@@ -45,6 +62,9 @@ async function loadCards() {
   // flip on click
   flashcard.addEventListener("click", () => {
     flashcard.classList.toggle("is-flipped");
+    if (window.MathJax) {
+      MathJax.typesetPromise([flashcard]);
+    }
   });
 
   document.getElementById("prevBtn").addEventListener("click", () => {
@@ -64,7 +84,3 @@ async function loadCards() {
 
 loadCards();
 </script>
-
-<!-- Add Markdown renderer (same one you used before) -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
