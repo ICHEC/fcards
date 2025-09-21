@@ -6,81 +6,30 @@ layout: default
 <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
 <h1>{{ page.title }}</h1>
 
-<div class="flashcard-container">
-  <div class="flashcard-wrapper">
-    <div class="flashcard" id="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front"></div>
-        <div class="flashcard-back"></div>
-      </div>
-    </div>
-
-    <div class="flashcard-nav">
-      <button id="prevBtn">← Prev</button>
-      <button id="nextBtn">Next →</button>
-    </div>
-  </div>
+<div class="flashcard-container" id="flashcard-container">
+  <!-- Cards injected here -->
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<div class="flashcard-nav">
+  <button id="prevBtn">← Prev</button>
+  <button id="nextBtn">Next →</button>
+</div>
 
-<!-- MathJax config -->
+<!-- marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- MathJax -->
 <script>
 window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],   // allow $...$ and \(...\)
-    displayMath: [['$$', '$$'], ['\\[', '\\]']] // allow $$...$$ and \[...\]
-  },
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
   svg: { fontCache: 'global' }
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
+<script src="{{ '/assets/js/flashcards.js' | relative_url }}"></script>
+
 <script>
-async function loadCards() {
-  const res = await fetch("{{ page.jsonfile | relative_url }}");
-  const cards = await res.json();
-
-  let current = 0;
-  const flashcard = document.getElementById("flashcard");
-  const front = flashcard.querySelector(".flashcard-front");
-  const back = flashcard.querySelector(".flashcard-back");
-
-  function renderCard() {
-    front.innerHTML = marked.parse(cards[current].front);
-    back.innerHTML = marked.parse(cards[current].back);
-    flashcard.classList.remove("is-flipped");
-
-    if (window.MathJax) {
-      MathJax.typesetClear();
-      MathJax.typesetPromise([flashcard]);
-    }
-  }
-
-  renderCard();
-
-  // flip on click
-  flashcard.addEventListener("click", () => {
-    flashcard.classList.toggle("is-flipped");
-    if (window.MathJax) {
-      MathJax.typesetPromise([flashcard]);
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    loadFlashcards("{{ page.jsonfile | relative_url }}");
   });
-
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    if (current > 0) {
-      current--;
-      renderCard();
-    }
-  });
-
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    if (current < cards.length - 1) {
-      current++;
-      renderCard();
-    }
-  });
-}
-
-loadCards();
 </script>
