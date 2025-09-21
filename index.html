@@ -11,6 +11,7 @@ title: Flashcard Lectures
     margin-top: 24px;
   }
   .lecture-card {
+    display: block;
     background: #fff;
     border: 3px solid #ddd;
     border-radius: 12px;
@@ -19,18 +20,14 @@ title: Flashcard Lectures
     font-size: 1.5rem;
     transition: all 0.2s ease;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: #0b74ff;
+    font-weight: 600;
   }
   .lecture-card:hover {
     border-color: #0b74ff;
     box-shadow: 0 12px 12px rgba(0,0,0,0.3);
     transform: translateY(-3px);
-  }
-  .lecture-card a {
-    display: block;
-    font-weight: 600;
-    font-size: 1.1em;
-    color: #0b74ff;
-    text-decoration: none;
   }
 </style>
 
@@ -39,8 +36,8 @@ title: Flashcard Lectures
 
 <div class="lecture-grid">
   {% for lec in site.lectures %}
-    <div class="lecture-card">
-      <a href="{{ lec.url | relative_url }}">{{ lec.title }}</a>
-    </div>
+    <a href="{{ lec.url | relative_url }}" class="lecture-card">
+      {{ lec.title }}
+    </a>
   {% endfor %}
 </div>
